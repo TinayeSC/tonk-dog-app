@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useDogStore } from "../stores/dogStore";
 
-const UploadDog = ({ userId }: { userId: string }) => {
+const UploadDog = ({  }: {  }) => {
   const addPost = useDogStore((s) => s.addPost);
   const [caption, setCaption] = useState("");
+  const[userId,setUser] = useState("");
   const [imageUrl, setImageUrl] = useState("");
 
   const handleUpload = () => {
@@ -29,6 +30,13 @@ const UploadDog = ({ userId }: { userId: string }) => {
         className="w-full mb-2 px-3 py-2 border rounded-lg"
         value={caption}
         onChange={(e) => setCaption(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="User ID"
+        className="w-full mb-2 px-3 py-2 border rounded-lg"
+        value={userId}
+        onChange={(e) => setUser(e.target.value)}
       />
       <button
         onClick={handleUpload}
