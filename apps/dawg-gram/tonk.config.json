@@ -1,0 +1,7 @@
+{
+  "name": "dawg-gram",
+  "plan": {
+    "description": "Instagram for the dawgs"
+  },
+  "template": "react"
+}

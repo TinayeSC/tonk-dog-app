@@ -1,0 +1,7 @@
+{
+  "name": "test1",
+  "plan": {
+    "description": "Building my first tonk"
+  },
+  "template": "react"
+}

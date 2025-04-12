@@ -1,0 +1,7 @@
+{
+  "name": "pixel-dog",
+  "plan": {
+    "description": "A shared pixel dog playground"
+  },
+  "template": "react"
+}
