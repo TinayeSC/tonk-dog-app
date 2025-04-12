@@ -1,98 +1,41 @@
 import React from 'react';
 
-interface PixelProps {
-  x: number;
-  y: number;
-  color: string;
-}
-
-const Pixel: React.FC<PixelProps> = ({ x, y, color }) => (
-  <div
-    style={{
-      gridColumn: x + 1,
-      gridRow: y + 1,
-      backgroundColor: color,
-      width: '100%',
-      height: '100%',
-    }}
-  />
-);
-
 interface PixelDogProps {
   x: number;
   y: number;
+  spriteUrl: string;
+  frame: number;
+  onClick: () => void;
+  scale: number;
 }
 
-const PixelDog: React.FC<PixelDogProps> = ({ x, y }) => {
-  // More recognizable pixel dog (8x8 grid)
-  const dogPattern = [
-    [0,0,0,1,1,1,1,0,0,0],
-    [0,0,1,1,1,1,1,1,0,0],
-    [0,1,1,2,1,1,2,1,1,0],
-    [1,1,1,1,1,1,1,1,1,1],
-    [1,1,3,1,1,1,1,3,1,1],
-    [1,1,1,1,1,1,1,1,1,1],
-    [0,0,1,1,1,1,1,1,0,0],
-    [0,1,1,0,0,0,0,1,1,0],
-    [1,1,0,0,0,0,0,0,1,1],
-    [0,0,1,0,0,0,0,1,0,0],
-  ];
+const PixelDog: React.FC<PixelDogProps> = ({ x, y, spriteUrl, frame, onClick, scale }) => {
+  // Assuming each frame is 32x32 pixels in the sprite
+  const frameWidth = 128;
+  const frameHeight = 128;
 
-  const getColor = (value: number) => {
-    switch (value) {
-      case 1:
-        return "#8B4513"; // main dog color
-      case 2:
-        return "#000"; // eyes
-      case 3:
-        return "#333"; // nose
-      case 0:
-      default:
-        return "#e5e7eb"; // light grey background
-    }
-  };
+  // Calculate background position based on the frame
+  const backgroundPosition = frame === 0 ? '0 0' : `-1410px 0`; // First frame is at (0, 0), second frame is at (-32px, 0)
 
-  return (
-    <>
-      {dogPattern.map((row, rowIndex) =>
-  row.map((pixel, colIndex) => (
-    <Pixel
-      key={`${rowIndex}-${colIndex}`}
-      x={x + colIndex}
-      y={y + rowIndex}
-      color={getColor(pixel)}
-    />
-  ))
-)}
-    </>
-  );
-  
-};
-
-export const PixelWorld: React.FC = () => {
-  const gridSize = 32; // 32x32 grid
+  // Scale the size of the div and background image
+  const scaledWidth = frameWidth * scale;
+  const scaledHeight = frameHeight * scale;
 
   return (
     <div
+      onClick={onClick} // Toggle frame on click
       style={{
-        display: 'grid',
-        gridTemplateColumns: `repeat(${gridSize}, 16px)`,
-        gridTemplateRows: `repeat(${gridSize}, 16px)`,
-        backgroundColor: '#87CEEB', // sky blue
-        width: gridSize * 16,
-        height: gridSize * 16,
-        border: '2px solid #333',
-        position: 'relative',
+        position: 'absolute',
+        left: `${x * scaledWidth}px`,
+        top: `${y * scaledHeight}px`,
+        width: `${scaledWidth}px`,
+        height: `${scaledHeight}px`,
+        backgroundImage: `url(${spriteUrl})`,
+        backgroundSize: `${frameWidth * 2 * scale}px ${frameHeight * scale}px`, // Adjust for two frames
+        backgroundPosition: backgroundPosition,
+        cursor: 'pointer',
       }}
-    >
-      {/* Ground (grass) */}
-      {Array.from({ length: gridSize }).map((_, col) =>
-        <Pixel key={`grass-${col}`} x={col} y={28} color="#228B22" />
-      )}
-
-      {/* Dog walking on the grass */}
-      <PixelDog x={12} y={20} />
-    </div>
+    ></div>
   );
 };
 

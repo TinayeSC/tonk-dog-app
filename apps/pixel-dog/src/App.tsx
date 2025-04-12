@@ -1,11 +1,21 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import { PixelArtView } from "./views";
+import React from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+import HelloWorld from './views/HelloWorld';
+import PixelArtView from './views/PixelArtView';
 
-const App: React.FC = () => {
+const App = () => {
   return (
-   <div className="flex justify-center items-center h-screen bg-neutral-100">
-      <PixelArtView />
+    <div>
+      <nav className="bg-gray-800 p-4">
+        <div className="max-w-4xl mx-auto flex gap-4">
+          <Link to="/" className="text-white hover:text-gray-300">Counter</Link>
+          <Link to="/pixel-art" className="text-white hover:text-gray-300">Pixel Art Dogs</Link>
+        </div>
+      </nav>
+      <Routes>
+        <Route path="/" element={<HelloWorld />} />
+        <Route path="/pixel-art" element={<PixelArtView />} />
+      </Routes>
     </div>
   );
 };
