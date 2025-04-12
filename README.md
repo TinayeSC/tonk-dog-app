@@ -1,7 +1,7 @@
 ## University Society Manager 
-### - Proof of Concept - Dog Society
+### Proof of Concept - Dog Society
 
-#Summary
+###Summary
 This project sought to make use of tonk's toolchain to design a hub for university students in student societies. As a committee member of the UoB Dog Society, I have noticed the difficulty in informing 
 our whole community of events and trying to manage all the discussions, questions, or voting for new committee members across the uni website, instagram, email, etc. This tonk project sought to make a start at addressing this 
 by centralising all of these features across three different- apps 'pixel-dog', 'dawg-gram', 'agm'. "agm" is the most practical of the three and would certainly be considered for adoption by the society after a few 
