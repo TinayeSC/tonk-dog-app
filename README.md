@@ -15,4 +15,16 @@ Please follow the installation guide for tonk if you do not have it set up alrea
 - #### **Technology Used**
 Tonk Stack, ChatGPT, Piskel
 
+- ### **Photos**
+  <p align="center">
+  <img src="Screenshot 2025-04-13 at 01.04.47.png" alt="Photo 1" width="400"/>
+  <img src="Screenshot 2025-04-13 at 01.04.49.png" alt="Photo 2" width="400"/>
+  <img src="Screenshot 2025-04-13 at 01.04.52.png" alt="Photo 3" width="400"/>
+</p>
+ <p align="center">
+  <img src="Screenshot 2025-04-13 at 01.04.56.png" alt="Photo 1" width="400"/>
+  <img src="Screenshot 2025-04-13 at 01.11.02.png" alt="Photo 2" width="400"/>
+  <img src="Screenshot 2025-04-13 at 01.16.38.png" alt="Photo 3" width="400"/>
+</p>
+
 
