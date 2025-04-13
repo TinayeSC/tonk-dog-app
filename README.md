@@ -18,7 +18,6 @@ Tonk Stack, ChatGPT, Piskel
 - ### **Photos**
   <p align="center">
   <img src="Screenshot 2025-04-13 at 01.04.47.png" alt="Photo 1" width="400"/>
-  <img src="Screenshot 2025-04-13 at 01.04.49.png" alt="Photo 2" width="400"/>
   <img src="Screenshot 2025-04-13 at 01.04.52.png" alt="Photo 3" width="400"/>
 </p>
  <p align="center">
