@@ -10,7 +10,7 @@ community members can have disucssions. 'dawg-gram' aims to be an instagram but 
 We planned to have the userId being shared across all three apps, where only users with valid university of bristol emails will be able to login (possible use portia ai to authenticate this). As this is a project that we feel as genuine use back at our University, we will certainly have a go at implementing this in the future. 
 
 - #### **Usage**
-Please follow the installation guide for tonk if you do not have it set up already. Once you have tonk set up, clone the apps folder into your tonk/ folder and everything should run. Alternatively, download each app and paste the folders into your already existing tonk/apps/. 
+Please follow the installation guide for tonk <a href="https://tonk-labs.github.io/tonk/quickstart.html" source="_blank">here</a> if you do not have it set up already. Once you have tonk set up, clone the apps folder into your tonk/ folder and everything should run. Alternatively, download each app and paste the folders into your already existing tonk/apps/. 
 
 - #### **Technology Used**
 Tonk Stack, ChatGPT, Piskel
